@@ -1,0 +1,13 @@
+requests
+ipykernel
+mysql-connector-python
+openai
+fastapi
+uvicorn
+pymupdf
+fitz
+aiohttp
+python-multipart
+# keybert
+sumy
+streamlit
