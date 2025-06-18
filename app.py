@@ -1,4 +1,3 @@
-# Hi! 👋 I’m your Federal Registry Assistant. How can I help you today?
 
 import streamlit as st
 import openai
