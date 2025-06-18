@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAG Agent</title>
+</head>
+<body>
+  <h2>Ask the Agent</h2>
+  <input id="userInput" type="text" placeholder="Your question..." style="width: 400px;">
+  <button onclick="askAgent()">Send</button>
+  <pre id="response"></pre>
+
+  <script>
+    async function askAgent() {
+      const query = document.getElementById("userInput").value;
+      const res = await fetch("http://localhost:8000/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: query })
+      });
+      const data = await res.json();
+      document.getElementById("response").textContent = data.response;
+    }
+  </script>
+</body>
+</html>
